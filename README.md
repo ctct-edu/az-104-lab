@@ -8,7 +8,7 @@
 
 ## マニュアルの見かた
 
-講師の指示に従い、「**[LabManual](https://github.com/ctct-edu/az-900-lab-2day/tree/main/LabManual)**」のフォルダへ移動してください。
+講師の指示に従い、「**[LabManual](https://github.com/ctct-edu/az-104-lab/tree/main/LabManual)**」のフォルダへ移動してください。
 
 フォルダ内に各演習のラボマニュアルが掲載されています。
 
@@ -18,4 +18,4 @@
 
 ## 演習の始め方
 
-まず初めに「Lab00_01_Preparation」を参照し、演習用アカウントの準備を開始してください。
+まず初めに「[Lab00_01_Preparation](https://github.com/ctct-edu/az-104-lab/blob/main/LabManual/LAB_00-Preparation.md)」を参照し、演習用アカウントの準備を開始してください。

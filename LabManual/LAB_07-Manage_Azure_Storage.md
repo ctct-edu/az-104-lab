@@ -4,7 +4,7 @@ lab:
     module: 'モジュール 07 - Azure Storage'
 ---
 
-# ラボ 7 - Azure Storage の管理
+# ラボ 07 - Azure Storage の管理
 # 受講生用ラボ マニュアル
 
 ## ラボ シナリオ
