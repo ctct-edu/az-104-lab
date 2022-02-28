@@ -1,4 +1,6 @@
-# Microsoft AzureAdministrator(AZ-104T00) ラボマニュアル
+# Microsoft AzureAdministrator(AZ-104T00)
+
+# ラボマニュアル
 
 ## はじめに
 
