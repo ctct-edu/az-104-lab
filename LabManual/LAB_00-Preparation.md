@@ -107,7 +107,7 @@ lab:
 
 このタスクでは、演習で使用するデータをダウンロードします。
 
-1. **[こちら](https://github.com/MicrosoftLearning/AZ-104JA-MicrosoftAzureAdministrator/archive/master.zip)**をクリックしてZipファイルをダウンロードしてください。
+1. [**こちら**](https://github.com/MicrosoftLearning/AZ-104JA-MicrosoftAzureAdministrator/archive/master.zip)クリックしてZipファイルをダウンロードしてください。
 
 1. 「**AZ-104JA-MicrosoftAzureAdministrator-master.zip**」というデータがダウンロードされます。
 
