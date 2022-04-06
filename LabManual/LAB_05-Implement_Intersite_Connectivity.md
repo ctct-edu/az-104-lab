@@ -54,9 +54,9 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
     本演習では、1つ目のリージョンを **「米国東部：eastus」** 、2つ目のリージョンを **「 東日本：japaneast 」** にデプロイします。
 
     ```powershell
-    $location1 = '[Azure_region_1]'
+    $location1 = 'eastus'
     
-    $location2 = '[Azure_region_2]'
+    $location2 = 'japaneast'
     
     $rgName = 'az104-05-rg1'
     
