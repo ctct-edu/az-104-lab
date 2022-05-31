@@ -9,7 +9,7 @@ lab:
 
 ## ラボ シナリオ
 
-プロビジョニング リソースに関連する基本的な Azure 管理機能を確認し、Azure portal、Azure Resouce Manager テンプレート、および Azure PowerShell を使用して、リソース グループに基づいてリソースを整理しました。次は、Azure CLI を使用して同等のタスクを実行します。Azure CLI のインストールを回避するには、Azure Cloud Shell で使用できる Bash 環境を活用します。
+リソースのプロビジョニングに関連する基本的な Azure 管理機能を確認し、Azure portal、Azure Resouce Manager テンプレート、および Azure PowerShell を使用して、リソース グループに基づいてリソースを整理しました。次は、Azure CLI を使用して同等のタスクを実行します。Azure CLI のインストールはせず、Azure Cloud Shell で使用できる Bash 環境を活用します。
 
 ## 目標
 
@@ -47,9 +47,9 @@ lab:
 
    ```sh
    LOCATION=$(az group show --name 'az104-03c-rg1' --query location --out tsv)
-
+   
    RGNAME='az104-03d-rg1'
-
+   
    az group create --name $RGNAME --location $LOCATION
    ```
 1. 新しく作成されたリソース グループのプロパティを取得するには、次のコマンドを実行します。
@@ -57,7 +57,7 @@ lab:
    ```sh
    az group show --name $RGNAME
    ```
-1. このモジュールの前のラボで作成したものと同じ特性を持つ新しいマネージド ディスクを作成するには、「Cloud Shell」 内の 「Bash」 セッションから次のコードを実行します。
+1. 前のラボで作成したものと同じ構成のマネージド ディスクを作成するには、「Cloud Shell」 内の 「Bash」 セッションから次のコードを実行します。
 
    ```sh
    DISKNAME='az104-03d-disk1'
@@ -86,7 +86,7 @@ lab:
    az disk update --resource-group $RGNAME --name $DISKNAME --size-gb 64
    ```
 
-1. 変更が有効になっていることを確認するには、次のコマンドを実行します。
+1. 変更が適用されていることを確認するには、次のコマンドを実行します。
 
    ```sh
    az disk show --resource-group $RGNAME --name $DISKNAME --query diskSizeGb
@@ -98,7 +98,7 @@ lab:
    az disk update --resource-group $RGNAME --name $DISKNAME --sku 'Premium_LRS'
    ```
 
-1. 変更が有効になっていることを確認するには、次のコマンドを実行します。
+1. 変更が適用されていることを確認するには、次のコマンドを実行します。
 
    ```sh
    az disk show --resource-group $RGNAME --name $DISKNAME --query sku

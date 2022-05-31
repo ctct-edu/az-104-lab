@@ -9,7 +9,7 @@ lab:
 
 ## ラボ シナリオ
 
-既にリソースのプロビジョニング、リソース グループに基づく構成に関連する Azure の基本的な管理機能を、Azure portal と Azure Resource Manager テンプレートを使用して確認しました。次は Azure PowerShell を使って同等のタスクを実行します。Azure PowerShell モジュールのインストールを避けるため、Azure Cloud Shell で使用できる PowerShell 環境を活用します。
+既にリソースのプロビジョニング、リソース グループに基づく構成に関連する Azure の基本的な管理機能を、Azure portal と Azure Resource Manager テンプレートを使用して確認しました。次は Azure PowerShell を使って同等のタスクを実行します。Azure PowerShell モジュールのインストールはせず、Azure Cloud Shell で使用できる PowerShell 環境を活用します。
 
 ## 目標
 
@@ -17,7 +17,7 @@ lab:
 
 + タスク 1: Azure Cloud Shell で PowerShell セッションを開始する
 + タスク 2: Azure PowerShell を使用して、リソース グループと Azure マネージド ディスクを作成する
-+ タスク 3: Azure PowerShell を使用してマネージド ディスクを構成する
++ タスク 3: Azure PowerShell を使用してマネージド ディスクの構成を変更する
 
 ## 予想時間: 20 分
 
@@ -47,7 +47,7 @@ lab:
 
 このタスクでは、Cloud Shell 内で Azure PowerShell セッションを使用して、リソース グループと Azure マネージド ディスクを作成します。
 
-1. 前のラボで作成した **az104-03b-rg1** リソース グループと同じ Azure リージョンにリソース グループを作成するには、Cloud Shell 内の PowerShell セッションから次を実行します。
+1. 前のラボで作成した **az104-03b-rg1** リソース グループと同じ Azure リージョンにリソース グループを作成ために、Cloud Shell 内の PowerShell セッションから次を実行します。
 
    ```powershell
    $location = (Get-AzResourceGroup -Name az104-03b-rg1).Location
@@ -61,7 +61,7 @@ lab:
    ```powershell
    Get-AzResourceGroup -Name $rgName
    ```
-1. このモジュールの前のラボで作成したものと同じ特性を持つ新しいマネージド ディスクを作成するには、次のコマンドを実行します。
+1. 直前のラボで作成したものと同じ構成のマネージド ディスクを作成するには、次のコマンドを実行します。
 
    ```powershell
    $diskConfig = New-AzDiskConfig `
@@ -94,7 +94,7 @@ lab:
    New-AzDiskUpdateConfig -DiskSizeGB 64 | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
    ```
 
-1. 変更が有効になっていることを確認するには、次のコマンドを実行します。
+1. 変更が適用されていることを確認するには、次のコマンドを実行します。
 
    ```powershell
    Get-AzDisk -ResourceGroupName $rgName -Name $diskName
@@ -112,7 +112,7 @@ lab:
    New-AzDiskUpdateConfig -Sku Premium_LRS | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
    ```
 
-1. 変更が有効になっていることを確認するには、次のコマンドを実行します。
+1. 変更が適用されていることを確認するには、次のコマンドを実行します。
 
    ```powershell
    (Get-AzDisk -ResourceGroupName $rgName -Name $diskName).Sku
